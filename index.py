@@ -8,11 +8,42 @@ ID Number
 Then you should display the information back in this format:
 Note that the square brackets [] indicate a value coming from the user and should not be displayed.
 
+
+----------------------------------------
+[LAST NAME], [first name]
+[Job title]
+ID: [id number]
+
+[email address]
+[phone number]
+----------------------------------------
+
 In addition to the spacing and punctuation shown above, you must implement the following requirements:
 The last name should be converted from whatever the user types to be displayed in ALL CAPS.
 The job title should be displayed so that the first letter is capitalized.
 The email address should be displayed in all lowercase.
 An example of the program running is shown:
+  
+Please enter the following information:
+
+First name: Jane
+Last name: Doe
+Email address: JaneDoe@email.com
+Phone number: (208) 555-1234
+Job title: chief software architect
+ID Number: 83-23821
+
+The ID Card is:
+----------------------------------------
+DOE, Jane
+Chief Software Architect
+ID: 83-23821
+
+janedoe@email.com
+(208) 555-1234
+----------------------------------------
+
+
 CORE REQUIREMENTS
 Each team activity will contain three core requirements. These are items that you are expected to be able to complete during the one hour team meeting if you have come prepared.
 You should work through the assignment in this order:
