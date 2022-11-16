@@ -1,0 +1,67 @@
+bank_accounts = []
+bank_balances = []
+bank_account_add = ""
+try:
+    while bank_account_add != "quit":
+        new_account = input("What account would you like to add? ")
+        bank_accounts.append(new_account)
+        new_balance = float(input("What balance would you like to add? "))
+        bank_balances.append(new_balance)
+        bank_account_add = input("Would you like to add any other accounts? quit to stop ")
+except:
+    print("Are your values making sense? ")
+
+
+previous_balance = 0
+for i in range(len(bank_accounts)):
+    total_balance = bank_balances[i] + previous_balance
+    previous_balance = total_balance
+print(f"{total_balance :.2f}")
+
+update_account = ""
+
+while update_account.lower() != "no":
+    
+    for i in range(len(bank_accounts)):
+        print(f'{bank_accounts[i]}. {bank_balances[i]}')
+    account_update = ""
+    while account_update != "quit":
+        index = int(input("Which index would you like to change? "))
+        new_value = float(input("New amount? "))
+        bank_balances[index] = new_value
+        account_update = input("Would you like to 'quit' ")
+    for i in range(len(bank_accounts)):
+        print(f'{bank_accounts[i]}. {bank_balances[i]}')
+    update_account = input("Would you like to update an account? ")
+
+total = 0
+for i in range(len(bank_accounts)):
+    print(f'{bank_accounts[i]} - ${bank_balances[i]:.2f}')
+    total = total + bank_balances[i]
+print(total)
+
+length = len(bank_accounts)
+average = total/length
+print(average)
+
+highest = -10000000
+for i in range(len(bank_accounts)):
+    if bank_balances[i] > highest:
+        highest = bank_balances[i]
+
+print(highest)
+
+
+
+for j, (bank_name,balance) in enumerate(zip(bank_accounts,bank_balances)):
+    print(f'{j}. {bank_name.capitalize()}: ${balance:.2f}')
+
+for i in range(len(bank_accounts)):
+    print(list(enumerate(bank_accounts[i])))
+
+
+
+
+
+
+
